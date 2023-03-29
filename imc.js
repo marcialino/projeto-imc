@@ -11,18 +11,22 @@
             var imc = pes/(alt*alt)
             
             if (imc < 18.5){
-                    res.innerHTML = `O seu IMC é de ${imc.toFixed(2)} <br/> Classificação: MAGREZA <br/>Obesidade: zero `
+                    res.innerHTML = `<strong>RESULTADO</strong><br/><br/><strong>IMC:</strong> ${imc.toFixed(2)} <br/> <br/><strong>Classificação: </strong>MAGREZA <br/><br/><strong>Obesidade:</strong> ZERO `
                     
             }if (imc > 18.5 && imc < 24.9){
-                    res.innerHTML = `O seu IMC é de ${imc.toFixed(2)}<br/> Classificação: NORMAL <br/> Obesidade: zero `
+                    res.innerHTML = `<strong>RESULTADO</strong><br/><br/><strong>IMC:</strong> ${imc.toFixed(2)} <br/> <br/><strong>Classificação: </strong> NORMAL <br/><br/><strong>Obesidade:</strong> ZERO `
+                                       
                 
             }if(imc > 25 && imc < 29.9 ){
-                     res.innerHTML = `O seu IMC é de ${imc.toFixed(2)}<br/> Classificação: SOBREPESO <br/>
-                     Obesidade: um `
+                     res.innerHTML = `<strong>RESULTADO</strong><br/><br/><strong>IMC:</strong> ${imc.toFixed(2)} <br/> <br/><strong>Classificação: </strong> SOBREPESO <br/><br/><strong>Obesidade:</strong> UM `
+                         
+
             } if (imc > 30.0 && imc < 39.9){
-                    res.innerHTML = `O seu IMC é de ${imc.toFixed(2)} <br/> Classificação: OBESIDADE <br/> Obesidade: dois `
+                    res.innerHTML = `<strong>RESULTADO</strong><br/><br/><strong>IMC:</strong> ${imc.toFixed(2)} <br/> <br/><strong>Classificação: </strong> OBESIDADE <br/><br/><strong>Obesidade:</strong> DOIS `
+                    
+
             }if (imc > 40){
-                    res.innerHTML = `O seu IMC é de ${imc.toFixed(2)} <br/> Classificação: OBESIDADE GRAVE <br/> Obesidade: três `
+                    res.innerHTML = `<strong>RESULTADO</strong><br/><br/><strong>IMC:</strong> ${imc.toFixed(2)} <br/> <br/><strong>Classificação: </strong> OBESIDADE GRAVE<br/><br/><strong>Obesidade:</strong> TRÊS `
             }
                         
         }
