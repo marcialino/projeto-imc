@@ -8,9 +8,20 @@ h1{
 }
 
 section{
-    font: normal 12pt Arial;
+    font: normal 16pt Arial;
     background-color: #fee275;
     width: 500px;
     padding: 15px;
     margin: auto;
+}
+#btn{
+    font: bold 12pt Arial;
+    border-radius: 8px;
+    padding: 8px;
+}
+#altura{
+    padding: 8px;
+}
+#peso{
+    padding: 8px;
 }
