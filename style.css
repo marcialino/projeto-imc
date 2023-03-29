@@ -1,15 +1,16 @@
 @charset "UTF-8";
 
 body{
-background-color: #e7d690;
+background-color: #c08552;
 }
 h1{
     text-align: center;
+    color: #f4f7be;
 }
 
 section{
     font: normal 16pt Arial;
-    background-color: #fee275;
+    background-color: #f4f7be;
     width: 500px;
     padding: 15px;
     margin: auto;
