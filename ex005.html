@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cálculo do IMC</title>
+</head>
+<body>
+    <header><h1>Cálculo do IMC</h1></header>
+    <section>
+        <div id="res">
+            <p>Altura (ex: 1.60): <input type="number" name="alt" id="altura" placeholder="Metros"></p>
+            <p>Peso (ex: 57.30): <input type="number" name="peso" id="peso" placeholder="Quilos"></p>
+            <p><input type="button" name="btn" id="btn" value="Calcular IMC" onclick="calcular()"></p>
+        
+        </div>
+        <div id="res">
+            <p>Preencha os dados para calcular!</p>
+        </div>
+    </section>
+      
+    <script>
+        function calcular(){
+            var altura = window.document.getElementById('altura')
+            var peso = window.document.getElementById('peso')
+
+            var alt = Number(altura.value)
+            var pes = Number(peso.value)
+
+            var res = window.document.getElementById('res')
+
+            var imc = pes/(alt*alt)
+            
+            if (imc < 18.5){
+                    res.innerHTML = `O seu IMC é de ${imc.toFixed(2)} <br/> Classificação: MAGREZA <br/>Obesidade: zero `
+                    
+            }if (imc > 18.5 && imc < 24.9){
+                    res.innerHTML = `O seu IMC é de ${imc.toFixed(2)}<br/> Classificação: NORMAL <br/> Obesidade: zero `
+                
+            }if(imc > 25 && imc < 29.9 ){
+                     res.innerHTML = `O seu IMC é de ${imc.toFixed(2)}<br/> Classificação: SOBREPESO <br/>
+                     Obesidade: um `
+            } if (imc > 30.0 && imc < 39.9){
+                    res.innerHTML = `O seu IMC é de ${imc.toFixed(2)} <br/> Classificação: OBESIDADE <br/> Obesidade: dois `
+            }if (imc > 40){
+                    res.innerHTML = `O seu IMC é de ${imc.toFixed(2)} <br/> Classificação: OBESIDADE GRAVE <br/> Obesidade: três `
+            }
+                        
+        }
+    </script>
+</body>
+</html>
